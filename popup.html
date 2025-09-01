@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI summariser</title>
+    <style>
+        
+body {
+  margin: 0;
+  padding: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f7f9fc;
+  color: #333;
+  width: 300px; 
+}
+
+
+h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin: 0 0 20px 0;
+}
+
+h2 img {
+  border-radius: 8px; 
+}
+
+
+div {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+
+select {
+  flex: 1;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: white;
+  font-size: 0.9rem;
+  transition: border 0.2s;
+}
+select:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+
+button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 8px;
+  background: #4a90e2;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.1s;
+}
+button:hover {
+  background: #357abd;
+}
+button:active {
+  transform: scale(0.95);
+}
+/* Inline spinner */
+.loader {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 3px solid #e6eef8;      /* light track */
+  border-top-color: #4a90e2;      /* brand blue */
+  animation: spin 0.9s linear infinite;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.02) inset;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+
+
+pre {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  max-height: 200px;
+  overflow-y: auto;
+  white-space: pre-wrap; 
+}
+
+
+    </style>
+</head>
+<body>
+    <h2>
+        <img src="icon.png" alt="logo" width="30" height="30">
+        TabGist.
+    </h2>
+
+    <pre id="result">Select a type and click Summarize.</pre>
+    
+    <div>
+        <select id="summary-type">
+            <option value="brief">Brief</option>
+            <option value="detailed">Detailed</option>
+            <option value="bullets">Bullets</option>
+        </select>
+
+        <button id="summarize">summarize</button>
+        <button id="copy-btn">copy</button>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
