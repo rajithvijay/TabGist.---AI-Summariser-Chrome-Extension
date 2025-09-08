@@ -8,7 +8,8 @@ Features:
 - One-click copy to clipboard.
 - Options page for securely saving the Gemini API key.
 
-Project Structure:
+Project Structure
+
 TabGist/
 │── manifest.json       # Extension configuration  
 │── background.js       # Handles installation events  
