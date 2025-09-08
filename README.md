@@ -11,6 +11,7 @@ Features:
 Project Structure
 
 TabGist/
+
 │── manifest.json       # Extension configuration  
 │── background.js       # Handles installation events  
 │── content.js          # Extracts text from web pages  
